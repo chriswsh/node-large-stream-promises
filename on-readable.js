@@ -19,7 +19,7 @@ let convertJSONtoGeoCodes = function*() {
 			counter++; // increment batch counter
 
 			// Add to the promise array
-            let p = new Promise((resolve, reject) => {
+            		let p = new Promise((resolve, reject) => {
 				// Do stuff, including declare local vars
 				let var1 = chunk.data1;
 				let var2 = chunk.data2;
@@ -60,7 +60,7 @@ let convertJSONtoGeoCodes = function*() {
 				promiseArray = [];
 			}
 
-            p = null;
+            		p = null;
 		}
 		// return, not yield, if we're at the end of the input stream
 		return Promise.all(promiseArray); 
